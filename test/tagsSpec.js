@@ -3,10 +3,12 @@ var tags = require("../lib/tags.js");
 
 describe("Tags", function(){
   describe("#parse()", function(){
-    var args = ["--depth=4", "--hello-world"];
-    var results = tags.parse(args);
+    it("should parse long options and convert numbers", function(){
+      var args = ["--depth=4", "--hello-world"];
+      var results = tags.parse(args);
 
-    expect(results).to.have.a.property("depth", 4);
-    expect(results).to.have.a.property("hello", "world");
+      expect(results).to.have.a.property("depth", 4);
+      expect(results).to.have.a.property("hello", "world");
+    });
   })
 });
