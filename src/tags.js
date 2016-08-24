@@ -24,6 +24,8 @@ exports.parse = function(args, defaults) {
           value = parseInt(value, 10);
         }
         options[key] = value;
+      } else {
+        options[arg] = true;
       }
     }
   }

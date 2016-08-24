@@ -3,7 +3,7 @@ var tags = require("../src/tags.js");
 
 describe("Tags", function(){
   describe("#parse()", function(){
-    it("should parse long options and convert numbers", function(){
+    it("should accept key-value options and parse them into an object", function(){
       var args = ["--depth=4", "--hello=world"];
       var results = tags.parse(args);
 
@@ -21,6 +21,12 @@ describe("Tags", function(){
         hello: "world"
       };
       expect(results).to.deep.equal(expected);
+    });
+    it("should accept simple options and set them", function(){
+      var args = ["--searchContents"];
+      var results = tags.parse(args);
+
+      expect(results).to.have.a.property("searchContents", true);
     });
   })
 });
