@@ -7,12 +7,17 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
-    "jshint": "^2.9.3",
+    "eslint": "^3.3.1",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "js-beautify": "^1.6.3",
     "mocha": "^3.0.2"
   },
   "scripts": {
     "test": "mocha",
-    "lint": "jshint src/*.js test/*.js || true"
+    "lint": "eslint src/*.js test/*.js || true",
+    "beaut": "js-beautify -rn src/*.js test/*.js"
   },
   "keywords": [],
   "author": "",

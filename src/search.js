@@ -32,12 +32,12 @@ exports.scan = function(dir, depth, done) {
     });
 };
 
-exports.match = function(query, files){
-  var matches = [];
-  files.forEach(function(name){
-    if(name.indexOf(query) !== -1){
-      matches.push(name);
-    }
-  });
-  return matches;
+exports.match = function(query, files) {
+    var matches = [];
+    files.forEach(function(name) {
+        if (name.indexOf(query) !== -1) {
+            matches.push(name);
+        }
+    });
+    return matches;
 }
