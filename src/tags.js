@@ -3,14 +3,14 @@ exports = module.exports = {};
 exports.parse = function(args, defaults, replacements) {
     var options = {};
     if (typeof defaults === "object" && !(defaults instanceof Array)) {
-        options = defaults
+        options = defaults;
     }
 
     for (var i in args) {
         var arg = args[i];
         if (arg.substr(0, 2) === "--") {
             // remove --
-            arg = arg.substr(2)
+            arg = arg.substr(2);
             if (arg.indexOf("=") !== -1) {
                 // split into further Array elements by
                 // char =
@@ -60,5 +60,5 @@ exports.parse = function(args, defaults, replacements) {
             }
         }
     }
-    return options
-}
+    return options;
+};

@@ -36,7 +36,7 @@ describe("Search", function() {
             });
         });
         it("should stop at a specified depth", function(done) {
-            search.scan('.test_files', 1, function(err, flist) {
+            search.scan(".test_files", 1, function(err, flist) {
                 expect(flist).to.deep.equal([
                     ".test_files/a",
                     ".test_files/b",
@@ -46,14 +46,14 @@ describe("Search", function() {
         });
     });
     describe("#match()", function(){
-      it("should find and return matches based on a query", function(){
-        var files = ["hello.txt", "world.js", "another.js"];
+        it("should find and return matches based on a query", function(){
+            var files = ["hello.txt", "world.js", "another.js"];
 
-        var results = search.match(".js", files);
-        expect(results).to.deep.equal(["world.js", "another.js"]);
+            var results = search.match(".js", files);
+            expect(results).to.deep.equal(["world.js", "another.js"]);
 
-        results = search.match("hello", files);
-        expect(results).to.deep.equal(["hello.txt"]);
-      })
-    })
+            results = search.match("hello", files);
+            expect(results).to.deep.equal(["hello.txt"]);
+        });
+    });
 });

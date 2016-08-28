@@ -11,7 +11,7 @@ exports.scan = function(dir, depth, done) {
         (function next() {
             var file = list[i++];
             if (!file) return done(null, results);
-            file = dir + '/' + file;
+            file = dir + "/" + file;
             fs.stat(file, function(err, stat) {
                 if (stat && stat.isDirectory()) {
                     if (depth !== 0) {
@@ -40,4 +40,4 @@ exports.match = function(query, files) {
         }
     });
     return matches;
-}
+};
