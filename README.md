@@ -9,3 +9,8 @@ Since I created a `package.json` using `npm init` and installed `mocha` and `cha
 as development dependencies, `mocha` was wired up to run with the command
 
     $ npm test
+
+## ToDo
+
+* Run test with travis
+* More documentation
