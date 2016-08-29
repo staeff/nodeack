@@ -1,24 +1,81 @@
 {
-    "env": {
-        "node": true
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-        "indent": [
-            1,
-            4
-        ],
-        "linebreak-style": [
-            1,
-            "unix"
-        ],
-        "quotes": [
-            1,
-            "double"
-        ],
-        "semi": [
-            1,
-            "always"
-        ]
-    }
+  "env": {
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "after": true,
+    "before": true,
+    "describe": true,
+    "it": true
+  },
+  "rules": {
+    "no-bitwise": 2,
+    "curly": 2,
+    "eqeqeq": 2,
+    "no-eval": 2,
+    "wrap-iife": [
+      2,
+      "any"
+    ],
+    "no-use-before-define": [
+      2,
+      {
+        "functions": false
+      }
+    ],
+    "new-cap": 2,
+    "no-caller": 2,
+    "no-empty": [
+      2,
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-new": 2,
+    "no-plusplus": 2,
+    "strict": [
+      2,
+      "function"
+    ],
+    "no-undef": 2,
+    "no-with": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multi-str": 2,
+    "space-unary-ops": [
+      2,
+      {
+        "words": false,
+        "nonwords": false
+      }
+    ],
+    "no-trailing-spaces": 2,
+    "camelcase": [
+      2,
+      {
+        "properties": "never"
+      }
+    ],
+    "eol-last": 2,
+    "space-infix-ops": 2,
+    "keyword-spacing": [
+      2,
+      {}
+    ],
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "quotes": [
+      2,
+      "single"
+    ]
+  }
 }
